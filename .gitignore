@@ -1,0 +1,11 @@
+node_modules/
+dist/
+
+# Dependencias instaladas
+node_modules/
+
+# Archivos compilados
+dist/
+
+# Archivo temporal de Code Runner
+tempCodeRunnerFile.ts

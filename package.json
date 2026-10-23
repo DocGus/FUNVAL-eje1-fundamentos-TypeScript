@@ -1,0 +1,14 @@
+{
+  "name": "logica-basica",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/ejercicios_basicos_logica.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.0.0"
+  }
+}
