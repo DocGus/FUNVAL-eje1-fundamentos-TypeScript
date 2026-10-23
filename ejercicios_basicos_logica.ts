@@ -30,6 +30,17 @@ Lógica y conceptos
     - La edad se recibe como texto y se incorpora al ticket tal como se escribió.
     - Se practica la entrada de datos, la creación de una variable y la interpolación
       de texto mediante una plantilla (template literal).
+
+Estructura lógica
+    Inicio
+      ↓
+    Ingresar nombre y edad
+      ↓
+    Crear ticket con nombre y edad
+      ↓
+    Mostrar saludo y ticket
+      ↓
+    Fin
 */
 
 //-------------------------------------RESPUESTAS 1
@@ -98,6 +109,19 @@ Lógica y conceptos
     - No hay condiciones ni decisiones; el flujo siempre sigue los mismos pasos.
     - Se practica la entrada de datos y la concatenación de texto mediante el operador +.
     - El nombre y la bebida se incorporan al mensaje tal como fueron ingresados.
+
+Estructura lógica
+    Inicio
+      ↓
+    Ingresar nombre
+      ↓
+    Ingresar bebida
+      ↓
+    Construir mensaje con nombre y bebida
+      ↓
+    Mostrar mensaje
+      ↓
+    Fin
 */
 
 //-------------------------------------RESPUESTAS 2
@@ -165,6 +189,19 @@ Lógica y conceptos
     - No hay condiciones ni decisiones; el flujo siempre sigue los mismos pasos.
     - Se practica la entrada de datos y la concatenación mediante el operador +.
     - Los datos se ingresan como texto; por eso no se calcula una suma matemática.
+
+Estructura lógica
+    Inicio
+      ↓
+    Ingresar primera cantidad
+      ↓
+    Ingresar segunda cantidad
+      ↓
+    Concatenar ambos textos
+      ↓
+    Mostrar resultado
+      ↓
+    Fin
 */
 
 //-------------------------------------RESPUESTAS 3
@@ -232,6 +269,17 @@ Lógica y conceptos
     - No hay condiciones ni decisiones; el flujo siempre sigue los mismos pasos.
     - Se practica la entrada de datos, la concatenación con el operador +,
       la asignación a una variable y la salida del resultado.
+
+Estructura lógica
+    Inicio
+      ↓
+    Ingresar nombre
+      ↓
+    Construir saludo con el nombre
+      ↓
+    Mostrar saludo
+      ↓
+    Fin
 */
 
 //-------------------------------------RESPUESTAS 4
@@ -299,6 +347,19 @@ Lógica y conceptos
     - No hay condiciones ni decisiones; el flujo siempre sigue los mismos pasos.
     - Se practican la entrada de datos, la asignación de variables y la multiplicación.
     - El descuento se calcula obteniendo el 90% del precio total.
+
+Estructura lógica
+    Inicio
+      ↓
+    Ingresar precio y cantidad
+      ↓
+    Calcular total = precio × cantidad
+      ↓
+    Calcular precio con descuento = total × 0.90
+      ↓
+    Mostrar total y precio con descuento
+      ↓
+    Fin
 */
 
 //-------------------------------------RESPUESTAS 5
@@ -369,6 +430,17 @@ Lógica y conceptos
     - Se practica la entrada de datos, la asignación de una variable
       y la multiplicación.
     - La tarifa fija es de $20 por hora.
+
+Estructura lógica
+    Inicio
+      ↓
+    Ingresar horas de estacionamiento
+      ↓
+    Calcular costo = 20 × horas
+      ↓
+    Mostrar costo
+      ↓
+    Fin
 */
 
 //-------------------------------------RESPUESTAS 6
@@ -445,6 +517,19 @@ Lógica y conceptos
       - 10 rebanadas entre 3 amigos: 3 para cada amigo y 1 sobrante.
       - 15 rebanadas entre 5 amigos: 3 para cada amigo y 0 sobrantes.
       - 5 rebanadas entre 6 amigos: 0 para cada amigo y 5 sobrantes.
+
+Estructura lógica
+    Inicio
+      ↓
+    Ingresar rebanadas y cantidad de amigos
+      ↓
+    Calcular rebanadas enteras por amigo
+      ↓
+    Calcular rebanadas sobrantes
+      ↓
+    Mostrar reparto y sobrantes
+      ↓
+    Fin
 */
 
 //-------------------------------------RESPUESTAS 7
@@ -522,6 +607,19 @@ Lógica y conceptos
     - Se practican la asignación de variables, la multiplicación y la resta.
     - El precio por kilo es fijo: $20.
     - Ejemplo: 3 kilos cuestan $60; si el cliente paga $100, recibe $40 de cambio.
+
+Estructura lógica
+    Inicio
+      ↓
+    Ingresar kilos de arroz y pago
+      ↓
+    Calcular total = kilos × 20
+      ↓
+    Calcular cambio = pago - total
+      ↓
+    Mostrar total y cambio
+      ↓
+    Fin
 */
 
 //-------------------------------------RESPUESTAS 8
@@ -603,6 +701,19 @@ Lógica y conceptos
     - Cuando el total es menor de $100, se conserva el total original y el descuento es $0.
     - La asignación original indicaba descuento = total cuando no aplicaba descuento;
       se corrigió a 0 para que coincida con el significado de «descuento realizado».
+
+Estructura lógica
+    Ingresar total de la cuenta
+              ↓
+         total >= 100?
+          /         \
+        Sí           No
+        ↓             ↓
+ Calcular 20%     Descuento = 0
+ de descuento     Total final = total
+ y total final        \   /
+          \             /
+       Mostrar total final y descuento
 */
 
 //-------------------------------------RESPUESTAS 9
@@ -705,6 +816,15 @@ Flujo del programa
 Lógica y conceptos
     - Se practica la condición if/else y el operador de comparación >.
     - La condición exige tener más de $200; tener exactamente $200 no es suficiente.
+
+Estructura lógica
+    Ingresar dinero en la cuenta
+              ↓
+          total > 200?
+          /         \
+        Sí           No
+        ↓             ↓
+    Sí entra       No entra
 */
 
 //-------------------------------------RESPUESTAS 10
@@ -814,6 +934,24 @@ Lógica y conceptos
       para cuentas menores de $100; se definió como el total original, igual que en
       el ejercicio 9. También se cambió descuento = total por 0 para representar
       correctamente que no se aplicó descuento.
+
+Estructura lógica
+    Ingresar total de la cuenta
+              ↓
+         total >= 100?
+          /         \
+        No           Sí
+        ↓             ↓
+ Descuento = 0   ¿total >= 1000?
+ Total final =       /      \
+     total          Sí        No
+                    ↓          ↓
+             Descuento 25%  Descuento 20%
+             Total final   Total final
+               = 75%         = 80%
+                    \          /
+              Mostrar total final
+                 y descuento
 */
 
 //-------------------------------------RESPUESTAS 11
@@ -930,6 +1068,23 @@ Lógica y conceptos
     - Se solicita una edad entera igual o mayor que cero.
     - Se conservan las categorías y abreviaturas tal como aparecen en el ejercicio;
       «MMJJ y HMMJ» no se reinterpreta.
+
+Estructura lógica
+    Ingresar edad
+       ↓
+    ¿edad < 12?
+     /      \
+   Sí        No
+   ↓          ↓
+Primaria   ¿edad < 18?
+             /      \
+           Sí        No
+           ↓          ↓
+   MMJJ y HMMJ    ¿edad <= 35?
+                   /       \
+                 Sí         No
+                 ↓           ↓
+                JAS   Escuela Dominical
 */
 
 //-------------------------------------RESPUESTAS 12
@@ -1037,6 +1192,15 @@ Lógica y conceptos
     - La edad debe ser un entero igual o mayor que 18.
     - La expresión incompleta «juan != AND edad >= 18» de la imagen no coincide
       con la descripción aclarada, por lo que no se usa como regla lógica.
+
+Estructura lógica
+    Ingresar nombre y edad
+              ↓
+    ¿nombre = "Homero" AND edad >= 18?
+              /                 \
+            Sí                   No
+            ↓                     ↓
+      Puede ingresar       No puede ingresar
 */
 
 //-------------------------------------RESPUESTAS 13
@@ -1141,6 +1305,16 @@ Lógica y conceptos
     - Se practica el operador lógico OR (||), comparaciones de texto y números.
     - El día se compara sin distinguir mayúsculas ni acentos.
     - Se conserva la numeración «Eje14» indicada en el material original.
+
+Estructura lógica
+    Ingresar día y edad
+          ↓
+    ¿día = miércoles OR edad >= 65?
+          /                   \
+        Sí                     No
+        ↓                       ↓
+Mostrar descuento       Pagar tarifa completa
+     del 50%
 */
 
 //-------------------------------------RESPUESTAS 14
@@ -1252,6 +1426,22 @@ Lógica y conceptos
     - Se practica una condición compuesta con AND (&&).
     - Las respuestas se comparan sin distinguir mayúsculas ni acentos.
     - No se agregó una situación adicional, porque la imagen original no la describe.
+
+Estructura lógica
+    Ingresar respuesta sobre pase VIP
+                  ↓
+        ¿Tiene pase VIP?
+          /           \
+        Sí             No
+        ↓               ↓
+Ingresar documento   Vete a casa
+        ↓             muchacho
+¿Tiene documento?
+    /       \
+  Sí         No
+  ↓           ↓
+Puedes ver   Vete a casa
+a Justin     muchacho
 */
 
 //-------------------------------------RESPUESTAS 15
@@ -1358,6 +1548,22 @@ Lógica y conceptos
     - El límite es $1500 o más (>= 1500); exactamente $1500 cumple el requisito.
     - La solución clásica representa las decisiones anidadas; la moderna expresa
       la misma regla como una condición compuesta.
+
+      Estructura lógica
+                   pase = "si"
+                   /           \
+                Sí               No
+                ↓                 ↓
+        Puedes viajar      cuenta >= 1500
+                              /       \
+                           Sí           No
+                           ↓             ↓
+                    documento = "si"   No puede viajar
+                       /      \
+                    Sí          No
+                    ↓            ↓
+              Puede viajar    No puede viajar
+
 */
 
 //-------------------------------------RESPUESTAS 16
@@ -1494,6 +1700,22 @@ Lógica y conceptos
     - Se practica la combinación de AND (&&), OR (||) y paréntesis.
     - Se requieren al menos 2 años de experiencia.
     - Los mensajes de salida fueron definidos para completar el ejercicio.
+
+Estructura lógica
+    Ingresar experiencia, licenciatura, salud,
+    portafolio y parentesco
+                  ↓
+    ¿experiencia >= 2 AND licenciado
+       AND saludable AND portafolio?
+          /                  \
+        Sí                    No
+        ↓                      ↓
+Puede ser contratada     ¿Es familiar?
+                           /       \
+                         Sí         No
+                         ↓           ↓
+                 Puede ser      No cumple los
+                 contratada       requisitos
 */
 
 //-------------------------------------RESPUESTAS 17
