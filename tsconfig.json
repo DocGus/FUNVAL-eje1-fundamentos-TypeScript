@@ -10,5 +10,5 @@
     "skipLibCheck": true,
     "types": ["node"]
   },
-  "include": ["ejercicios_basicos_logica.ts"]
+  "include": ["ejercicios/**/*.ts"]
 }
