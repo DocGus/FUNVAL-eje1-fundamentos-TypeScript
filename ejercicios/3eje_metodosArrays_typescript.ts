@@ -1,3 +1,8 @@
+// APUNTE Y EJERCICIOS DE MÉTODOS DE ARRAYS EN TYPESCRIPT
+
+//----------------------------------------------------------
+// MÉTODOS DE ARRAYS
+
 let estudiantes2: string[] = [
   "Ivan",
   "Santiago",
@@ -6,7 +11,8 @@ let estudiantes2: string[] = [
   "Oscar",
   "Leonardo",
 ];
-/* ----------metodos de arrays---------- */
+
+// FOR EACH
 estudiantes2.forEach(function (e: string): void {
   console.log("Hola buenos dias " + e);
 });
@@ -15,21 +21,25 @@ estudiantes2.forEach((e: string): void => {
   console.log("esta funcion flecha " + e);
 });
 
-/* -----------FORMAS DE ESCRIBIR UNA FUNCION------------ */
+//----------------------------------------------------------
+// FORMAS DE ESCRIBIR UNA FUNCIÓN
 
 function resta(a: number, b: number): void {
   //codigo de la funcion
   let res = a - b;
 }
-/* ---------------FUNCIONES ANONIMAS------------ */
+
+// FUNCIÓN ANÓNIMA
 const superResta = function (a: number, b: number): void {
   //codigo de la funcion
   let res = a - b;
 };
-/* --------------FUNCIONES FLECHA------------------ */
+
+// FUNCIÓN FLECHA
 const superResta2 = (a: number, b: number): number => a - b;
 
-/* --------------------MAP--------------------- */
+//----------------------------------------------------------
+// MAP
 
 let numeros: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -37,35 +47,39 @@ let listaNueva = numeros.map(function (numero: number): string {
   return numero + " Rodriguez";
 });
 
-/* ------------------Filter----------------------- */
+// FILTER
 let listaFiltrada = numeros.filter(function (numero: number) {
   return numero % 2 !== 0;
 });
 console.log(listaFiltrada);
-/* ----------------find----------------------------- */
+
+// FIND
 let numeroEncontrado = numeros.find(function (num: number) {
   return num > 5;
 });
 
 console.log(numeroEncontrado);
-/* ----------------FindIndex------------ */
+
+// FIND INDEX
 let indiceEncontrado = numeros.findIndex(function (num: number) {
   return num > 5;
 });
 console.log(indiceEncontrado);
-/* -------------SOME------------------ */
+
+// SOME
 let alguno = numeros.some(function (num: number) {
   return num > 9;
 });
 console.log(alguno);
 
-/* -------------------------EJERCICIOS------------------------------- */
+//----------------------------------------------------------
+// EJERCICIOS
 
-// ============================================================================
+//----------------------------------------------------------
 // BLOQUE 1: forEach (Iteración y efectos secundarios)
-// ============================================================================
+//----------------------------------------------------------
 
-// --- Interfaces base ---
+// Interfaces base
 interface Estudiante {
   nombre: string;
   nota: number;
@@ -77,7 +91,7 @@ interface ProductoStock {
   stock: number;
 }
 
-// ----------------------------------------------------------------------------
+//----------------------------------------------------------
 // [1] PROFE (DEMO)
 // Consigna: Recorrer el array de notas y mostrar por consola un mensaje
 // con el formato: "Alumno: [nombre] | Calificación: [nota]".
@@ -87,7 +101,13 @@ const estudiantesDemo: Estudiante[] = [
   { nombre: "Mariana", nota: 78 },
 ];
 
-// ----------------------------------------------------------------------------
+estudiantesDemo.forEach((estudiante: Estudiante): void => {
+  console.log(
+    `Alumno: ${estudiante.nombre} | Calificación: ${estudiante.nota}`,
+  );
+});
+
+//----------------------------------------------------------
 // [2] RETO ESTUDIANTE
 // Consigna: Usar forEach para recorrer la lista de productos e imprimir
 // una alerta por consola si el stock es menor a 5 unidades:
@@ -99,7 +119,7 @@ const inventario: ProductoStock[] = [
   { id: 103, nombre: "Cable HDMI 2.1", stock: 2 },
 ];
 
-// TU CÓDIGO AQUÍ:
+// Tu código aquí:
 inventario.forEach((producto: ProductoStock): void => {
   if (producto.stock < 5) {
     console.log(
@@ -110,14 +130,14 @@ inventario.forEach((producto: ProductoStock): void => {
   }
 });
 
-// ----------------------------------------------------------------------------
+//----------------------------------------------------------
 // [3] PROFE (DEMO)
 // Consigna: Usar forEach con su segundo parámetro (índice) para acumular
 // el total de una lista de precios y mostrar el paso a paso.
 const preciosDemo: number[] = [120, 45, 90, 15];
 let totalDemo: number = 0;
 
-// ----------------------------------------------------------------------------
+//----------------------------------------------------------
 // [4] RETO ESTUDIANTE
 // Consigna: Dado un array con las horas de estudio semanales de un alumno,
 // usar forEach con el índice para calcular cuántas horas superan las 4 horas
@@ -125,7 +145,7 @@ let totalDemo: number = 0;
 const horasSemanales: number[] = [5, 3, 6, 2, 8, 4, 1];
 let diasSuperados: number = 0;
 
-// TU CÓDIGO AQUÍ:
+// Tu código aquí:
 horasSemanales.forEach((horas: number, indice: number): void => {
   const superoMeta: boolean = horas > 4;
   if (superoMeta) {
@@ -136,11 +156,11 @@ horasSemanales.forEach((horas: number, indice: number): void => {
   );
 });
 
-// ============================================================================
+//----------------------------------------------------------
 // BLOQUE 2: map (Transformación de datos hacia un nuevo array)
-// ============================================================================
+//----------------------------------------------------------
 
-// --- Interfaces base ---
+// Interfaces base
 interface ProductoPrecio {
   nombre: string;
   precioUsd: number;
@@ -163,7 +183,7 @@ interface UsuarioPerfil {
   esMayorDeEdad: boolean;
 }
 
-// ----------------------------------------------------------------------------
+//----------------------------------------------------------
 // [5] PROFE (DEMO)
 // Consigna: Transformar una lista de precios en USD a una lista de objetos
 // que incluya el cálculo de impuesto (13%).
@@ -173,7 +193,7 @@ const catalogoDemo: ProductoPrecio[] = [
   { nombre: "Webcam 1080p", precioUsd: 60 },
 ];
 
-// ----------------------------------------------------------------------------
+//----------------------------------------------------------
 // [6] RETO ESTUDIANTE
 // Consigna: Dado un array de usuarios con nombres separados y edad, usar map
 // para obtener un array de objetos tipo `UsuarioPerfil` con el nombre concatenado
@@ -184,7 +204,7 @@ const usuariosRaw: UsuarioRaw[] = [
   { primerNombre: "Diego", apellidoPaterno: "Salvatierra", edad: 15 },
 ];
 
-// TU CÓDIGO AQUÍ:
+// Tu código aquí:
 const perfilesUsuarios: UsuarioPerfil[] = usuariosRaw.map(
   (usuario: UsuarioRaw): UsuarioPerfil => ({
     nombreCompleto: `${usuario.primerNombre} ${usuario.apellidoPaterno}`.toUpperCase(),
@@ -193,7 +213,7 @@ const perfilesUsuarios: UsuarioPerfil[] = usuariosRaw.map(
 );
 console.log(perfilesUsuarios);
 
-// ----------------------------------------------------------------------------
+//----------------------------------------------------------
 // [7] PROFE (DEMO)
 // Consigna: Mapear un array de strings con nombres de archivos y extraer
 // solo la extensión de cada uno.
@@ -204,7 +224,7 @@ const archivosDemo: string[] = [
   "script.ts",
 ];
 
-// ----------------------------------------------------------------------------
+//----------------------------------------------------------
 // [8] RETO ESTUDIANTE
 // Consigna: Dado un array de correos electrónicos corporativos, usar map para
 // extraer un array con solo los dominios de cada correo (lo que va después del @).
@@ -216,17 +236,17 @@ const correos: string[] = [
   "soporte@servicios.bo",
 ];
 
-// TU CÓDIGO AQUÍ:
+// Tu código aquí:
 const dominiosCorreos: string[] = correos.map(
   (correo: string): string => correo.slice(correo.indexOf("@") + 1),
 );
 console.log(dominiosCorreos);
 
-// ============================================================================
+//----------------------------------------------------------
 // BLOQUE 3: filter (Filtrado de colecciones bajo una condición)
-// ============================================================================
+//----------------------------------------------------------
 
-// --- Interfaces base ---
+// Interfaces base
 interface Tarea {
   id: number;
   titulo: string;
@@ -241,7 +261,7 @@ interface Transaccion {
   aprobada: boolean;
 }
 
-// ----------------------------------------------------------------------------
+//----------------------------------------------------------
 // [9] PROFE (DEMO)
 // Consigna: Filtrar un listado de tareas pendientes que además tengan prioridad alta.
 const tareasDemo: Tarea[] = [
@@ -266,7 +286,7 @@ const tareasDemo: Tarea[] = [
   },
 ];
 
-// ----------------------------------------------------------------------------
+//----------------------------------------------------------
 // [10] RETO ESTUDIANTE
 // Consigna: Filtrar un array de transacciones financieras para obtener solo
 // aquellas que sean de tipo "egreso", que hayan sido aprobadas y cuyo monto
@@ -279,7 +299,7 @@ const historialTransacciones: Transaccion[] = [
   { id: "tx-05", monto: 150, tipo: "egreso", aprobada: true },
 ];
 
-// TU CÓDIGO AQUÍ:
+// Tu código aquí:
 const egresosAprobados: Transaccion[] = historialTransacciones.filter(
   (transaccion: Transaccion): boolean =>
     transaccion.tipo === "egreso" &&
@@ -288,7 +308,7 @@ const egresosAprobados: Transaccion[] = historialTransacciones.filter(
 );
 console.log(egresosAprobados);
 
-// ----------------------------------------------------------------------------
+//----------------------------------------------------------
 // [11] PROFE (DEMO)
 // Consigna: Filtrar palabras que tengan más de 6 letras y que comiencen con la letra 'c'.
 const palabrasDemo: string[] = [
@@ -300,7 +320,7 @@ const palabrasDemo: string[] = [
   "controlador",
 ];
 
-// ----------------------------------------------------------------------------
+//----------------------------------------------------------
 // [12] RETO ESTUDIANTE
 // Consigna: Dado un array de slugs de rutas web, filtrar solo aquellos que
 // contengan un guión medio ("-") y cuya longitud sea menor o igual a 15 caracteres.
@@ -313,17 +333,17 @@ const rutasWeb: string[] = [
   "faq",
 ];
 
-// TU CÓDIGO AQUÍ:
+// Tu código aquí:
 const rutasConGuionCortas: string[] = rutasWeb.filter(
   (ruta: string): boolean => ruta.includes("-") && ruta.length <= 15,
 );
 console.log(rutasConGuionCortas);
 
-// ============================================================================
+//----------------------------------------------------------
 // BLOQUE 4: find (Búsqueda del primer elemento coincidente)
-// ============================================================================
+//----------------------------------------------------------
 
-// --- Interfaces base ---
+// Interfaces base
 interface UsuarioSistema {
   id: number;
   username: string;
@@ -338,7 +358,7 @@ interface Vehiculo {
   enMantenimiento: boolean;
 }
 
-// ----------------------------------------------------------------------------
+//----------------------------------------------------------
 // [13] PROFE (DEMO)
 // Consigna: Buscar al primer usuario que tenga rol "admin" y esté activo.
 // Manejar el caso de no encontrarlo usando optional chaining o fallback.
@@ -349,7 +369,7 @@ const usuariosDemo: UsuarioSistema[] = [
   { id: 4, username: "visitante_99", rol: "invitado", activo: true },
 ];
 
-// ----------------------------------------------------------------------------
+//----------------------------------------------------------
 // [14] RETO ESTUDIANTE
 // Consigna: Buscar en la flotilla el primer vehículo de marca "Toyota" que
 // sea del año 2020 en adelante y que NO esté en mantenimiento. Imprimir su placa.
@@ -360,7 +380,7 @@ const flotilla: Vehiculo[] = [
   { placa: "7741-KLP", marca: "Toyota", anio: 2023, enMantenimiento: false },
 ];
 
-// TU CÓDIGO AQUÍ:
+// Tu código aquí:
 const toyotaDisponible: Vehiculo | undefined = flotilla.find(
   (vehiculo: Vehiculo): boolean =>
     vehiculo.marca === "Toyota" &&
@@ -369,28 +389,28 @@ const toyotaDisponible: Vehiculo | undefined = flotilla.find(
 );
 console.log(toyotaDisponible?.placa ?? "Vehículo no encontrado");
 
-// ----------------------------------------------------------------------------
+//----------------------------------------------------------
 // [15] PROFE (DEMO)
 // Consigna: Buscar el primer número negativo dentro de un array de saldos.
 const saldosDemo: number[] = [1500, 320, 85, -240, 600, -15];
 
-// ----------------------------------------------------------------------------
+//----------------------------------------------------------
 // [16] RETO ESTUDIANTE
 // Consigna: Dado un array de puntajes de un juego, encontrar el primer puntaje
 // que supere los 100 puntos y sea un número par. Imprimir el resultado.
 const puntajes: number[] = [45, 88, 105, 112, 99, 140];
 
-// TU CÓDIGO AQUÍ:
+// Tu código aquí:
 const puntajeValido: number | undefined = puntajes.find(
   (puntaje: number): boolean => puntaje > 100 && puntaje % 2 === 0,
 );
 console.log(puntajeValido ?? "No se encontró un puntaje que cumpla la condición");
 
-// ============================================================================
+//----------------------------------------------------------
 // BLOQUE 5: findIndex (Ubicación por índice) y Desafíos Integradores
-// ============================================================================
+//----------------------------------------------------------
 
-// --- Interfaces base ---
+// Interfaces base
 interface Pasajero {
   asiento: string;
   nombre: string;
@@ -403,7 +423,7 @@ interface ProductoCarrito {
   cantidad: number;
 }
 
-// ----------------------------------------------------------------------------
+//----------------------------------------------------------
 // [17] PROFE (DEMO)
 // Consigna: Encontrar el índice del primer pasajero que NO haya confirmado su
 // boleto para actualizar su estado. Si no existe, avisar que todos confirmaron.
@@ -414,7 +434,7 @@ const listaPasajerosDemo: Pasajero[] = [
   { asiento: "2B", nombre: "Jorge Flores", confirmado: true },
 ];
 
-// ----------------------------------------------------------------------------
+//----------------------------------------------------------
 // [18] RETO ESTUDIANTE
 // Consigna: En un carrito de compras, encontrar el índice del producto con SKU
 // "SKU-990". Si existe (índice distinto de -1), aumentar su cantidad en 1 unidad
@@ -425,7 +445,7 @@ const carrito: ProductoCarrito[] = [
   { sku: "SKU-990", nombre: "Stickers Dev", cantidad: 3 },
 ];
 
-// TU CÓDIGO AQUÍ:
+// Tu código aquí:
 const indiceProducto: number = carrito.findIndex(
   (producto: ProductoCarrito): boolean => producto.sku === "SKU-990",
 );
@@ -435,7 +455,7 @@ if (indiceProducto !== -1) {
   console.log("Producto no encontrado");
 }
 
-// ----------------------------------------------------------------------------
+//----------------------------------------------------------
 // [19] PROFE (DEMO) - INTEGRADOR: filter + map encadenados
 // Consigna: De una lista de estudiantes, filtrar solo a los que aprobaron
 // (nota >= 51) y devolver únicamente un array de strings con sus nombres en mayúsculas.
@@ -446,7 +466,7 @@ const alumnosCursoDemo: Estudiante[] = [
   { nombre: "Daniela", nota: 88 },
 ];
 
-// ----------------------------------------------------------------------------
+//----------------------------------------------------------
 // [20] RETO ESTUDIANTE - INTEGRADOR: filter + map encadenados
 // Consigna: Dado el array de productos del inventario, encadenar `filter` y `map` para:
 // 1. Filtrar solo los productos cuyo stock sea mayor a 0 (disponibles).
@@ -459,7 +479,7 @@ const catalogoAlmacen: ProductoStock[] = [
   { id: 204, nombre: "Brazo Articulado", stock: 0 },
 ];
 
-// TU CÓDIGO AQUÍ:
+// Tu código aquí:
 const productosDisponibles: string[] = catalogoAlmacen
   .filter((producto: ProductoStock): boolean => producto.stock > 0)
   .map(

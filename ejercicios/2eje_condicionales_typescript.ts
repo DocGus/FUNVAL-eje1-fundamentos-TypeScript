@@ -1,12 +1,13 @@
-/* -----------------CONDICIONALES------------------- */
+// APUNTE Y EJERCICIOS DE CONDICIONALES EN TYPESCRIPT
 
-/* 
-                IF
-    if(condicion){
-        codigo q se ejecutara
-        si la condicion 
-        es verdadera
-    }
+//----------------------------------------------------------
+// ESTRUCTURAS CONDICIONALES
+
+/*
+IF
+if (condicion) {
+  codigo que se ejecutara si la condicion es verdadera
+}
 */
 /*
  * Enunciado: Comprueba si una persona tiene 18 años o más. Si cumple la
@@ -17,17 +18,13 @@ if (age >= 18) {
   console.log("esta persona es mayor de edad");
 } */
 
-/* 
-                IF-ELSE
-    if(condicion){
-        codigo q se ejecutara
-        si la condicion 
-        es verdadera
-    }else{
-        codigo q se ejecutara
-        si la condicion 
-        es falsa
-    }
+/*
+IF-ELSE
+if (condicion) {
+  codigo que se ejecutara si la condicion es verdadera
+} else {
+  codigo que se ejecutara si la condicion es falsa
+}
 */
 /*
  * Enunciado: Revisa si el dinero disponible alcanza para comprar una PS5,
@@ -41,22 +38,15 @@ if (dinero >= 1000) {
   console.log("no puedes comprar este lujito mi rey");
 }
 
-/* 
-        IF-ELSE-IF
-if(condicion1){
-        codigo q se ejecutara
-        si la condicion1 
-        es verdadera
-    }else if(condicion2){
-        codigo q se ejecutara
-        si la condicion2 
-        es verdadera y ademas 
-        la condicion 1 es falsa
-    }else{
-        codigo q se ejecutara
-        si la condicion 2 es falsa    
-    }
-
+/*
+IF-ELSE-IF
+if (condicion1) {
+  codigo que se ejecutara si condicion1 es verdadera
+} else if (condicion2) {
+  codigo que se ejecutara si condicion2 es verdadera
+} else {
+  codigo que se ejecutara si las condiciones anteriores son falsas
+}
 */
 /*
  * Enunciado: Muestra el rango de jugador correspondiente según su MMR.
@@ -89,22 +79,18 @@ if (sacerdocio == "si") {
   }
 }
 
-/* 
-        SWICH-CASE
-switch (llave o variable) {
-    case 1:
-        codigo q se ejecutara si la lave toma el valor de 1
-        break;
-    case 2:
-        codigo q se ejecutara si la lave toma el valor de 2
-        break;
-    case 3:
-        codigo q se ejecutara si la lave toma el valor de 3
-        break;
-
-    default:
-        codigo q se ejecutara si la llave no toma ningun valor anterior
-        break;
+/*
+SWITCH-CASE
+switch (variable) {
+  case 1:
+    codigo que se ejecutara si la variable vale 1
+    break;
+  case 2:
+    codigo que se ejecutara si la variable vale 2
+    break;
+  default:
+    codigo que se ejecutara si no coincide con ningun caso
+    break;
 }
 */
 /*
@@ -128,9 +114,9 @@ switch (opcion) {
     break;
 }
 
-// ==========================================
+//----------------------------------------------------------
 // NIVEL FÁCIL: if, if-else básicos
-// ==========================================
+//----------------------------------------------------------
 
 /**
  * EJERCICIO 1: Pago de pasaje en transporte público (if - else)
@@ -204,9 +190,9 @@ if (horaActual >= 9 && horaActual <= 20) {
   console.log("Puerta cerrada: Atención finalizada por hoy.");
 }
 
-// ==========================================
+//----------------------------------------------------------
 // NIVEL INTERMEDIO BAJO: if - else if - else
-// ==========================================
+//----------------------------------------------------------
 
 /**
  * EJERCICIO 4: Luces del semáforo vehicular (switch - case)
@@ -318,9 +304,9 @@ switch (categoriaElegida) {
     break;
 }
 
-// ==========================================
+//----------------------------------------------------------
 // NIVEL INTERMEDIO: Condiciones anidadas y lógica combinada
-// ==========================================
+//----------------------------------------------------------
 
 /**
  * EJERCICIO 7: Alerta de medidor de batería de celular (if - else if - else)
